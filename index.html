@@ -103,6 +103,13 @@
     .route p { margin: .25rem 0 0; color: var(--muted); }
     .route a { font-weight: 900; text-underline-offset: .25em; }
 
+    .signup { background: white; }
+    .form-warning { margin: 0 0 1.5rem 30%; padding: 1rem 1.2rem; border: 2px solid var(--orange); background: #fff4e8; color: var(--navy); }
+    .form-warning strong { color: var(--orange-dark); }
+    .form-frame { width: 70%; min-height: 1750px; margin-left: 30%; border: 1px solid var(--line); background: white; }
+    .form-link { margin: 1rem 0 0 30%; }
+    .form-link a { font-weight: 900; text-underline-offset: .25em; }
+
     .faq { max-width: 820px; margin-left: auto; }
     details { border-top: 1px solid var(--line); }
     details:last-child { border-bottom: 1px solid var(--line); }
@@ -131,7 +138,8 @@
       .way { min-height: auto; }
       .way + .way { padding-left: 0; border-left: 0; }
       .way-kicker { min-height: 0; margin-bottom: 1.5rem; }
-      .timeline, .route-list, .contact-card, .provisional { margin-left: 0; }
+      .timeline, .route-list, .contact-card, .provisional, .form-warning, .form-frame, .form-link { margin-left: 0; }
+      .form-frame { width: 100%; min-height: 1900px; }
       .footer-inner { grid-template-columns: 1fr; }
       .footer-meta { text-align: left; }
     }
@@ -153,7 +161,7 @@
       <a class="brand" href="#top" aria-label="Friedenslicht-Marathon Startseite"><span class="flame" aria-hidden="true"></span><span>Friedenslicht-Marathon</span></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
       <div class="nav-links" id="nav-links">
-        <a href="#mitmachen">Mitmachen</a><a href="#ablauf">Ablauf</a><a href="#strecken">Strecken</a><a href="sponsoren.html">Sponsoren</a><a href="#fragen">Fragen</a><a href="#kontakt">Kontakt</a>
+        <a href="#mitmachen">Mitmachen</a><a href="#ablauf">Ablauf</a><a href="#strecken">Strecken</a><a href="#anmeldung">Anmeldung</a><a href="sponsoren.html">Sponsoren</a><a href="#fragen">Fragen</a><a href="#kontakt">Kontakt</a>
       </div>
     </nav>
   </header>
@@ -215,19 +223,26 @@
       </div>
     </div></section>
 
+    <section class="signup" id="anmeldung"><div class="section">
+      <div class="section-head"><span class="section-number">04 / ANMELDUNG</span><h2>Jetzt zum Friedenslicht-Marathon anmelden.</h2></div>
+      <p class="form-warning"><strong>Wichtiger Hinweis:</strong> Das eingebettete Formular enthält derzeit noch die Angaben für 2025. Bitte diese Angaben vor dem Absenden beachten; das Formular wird auf 2026 aktualisiert.</p>
+      <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdTabZoGVs5SsUxf9svsvF4nRrcNxpuMyc_rvOdQ6Gw6SN6cg/viewform?embedded=true" title="Anmeldung zum Friedenslicht-Marathon" loading="lazy">Wird geladen…</iframe>
+      <p class="form-link"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdTabZoGVs5SsUxf9svsvF4nRrcNxpuMyc_rvOdQ6Gw6SN6cg/viewform" target="_blank" rel="noreferrer">Anmeldeformular in einem neuen Fenster öffnen ↗</a></p>
+    </div></section>
+
     <section class="section" id="fragen">
-      <div class="section-head"><span class="section-number">04 / FRAGEN</span><h2>Gut vorbereitet losgehen.</h2></div>
+      <div class="section-head"><span class="section-number">05 / FRAGEN</span><h2>Gut vorbereitet losgehen.</h2></div>
       <div class="faq">
         <details><summary>Muss ich die ganze Strecke absolvieren?</summary><p>Nein. Neben Lauf und Walking ist ein gemeinsamer Lichterzug über die letzten rund 500 Meter geplant. Für eine kürzere Laufvariante ist außerdem ein Zustieg in Weigersdorf vorgesehen. Die endgültigen Details werden vor der Veranstaltung bestätigt.</p></details>
         <details><summary>Können Kinder und Familien teilnehmen?</summary><p>Ja. Gerade der letzte gemeinsame Abschnitt ist für Kinder, Familien, Vereine und alle Bewohner gedacht. Für Kinder sind Laternen statt offener Fackeln vorgesehen.</p></details>
         <details><summary>Geht es um einen sportlichen Wettkampf?</summary><p>Nein. Das gemeinsame Erlebnis und der soziale Zweck stehen im Vordergrund. Die Laufgruppe orientiert sich an einem gemeinsamen Tempo.</p></details>
-        <details><summary>Wo kann ich mich anmelden?</summary><p>Die Online-Anmeldung für 2026 ist noch in Vorbereitung. Sobald das offizielle Formular freigegeben ist, wird es hier verlinkt.</p></details>
+        <details><summary>Wo kann ich mich anmelden?</summary><p>Das Google-Formular ist direkt auf dieser Seite eingebettet. Es enthält derzeit noch Angaben für 2025 und wird auf 2026 aktualisiert.</p></details>
         <details><summary>Sind alle Angaben endgültig?</summary><p>Datum und Treffpunkt sind bestätigt. Die Streckenlinks und Ablaufzeiten basieren auf 2025; einzelne organisatorische Details können sich bis zur Veranstaltung noch ändern.</p></details>
       </div>
     </section>
 
     <section class="contact" id="kontakt"><div class="section">
-      <div class="section-head"><span class="section-number">05 / KONTAKT</span><h2>Fragen zum Friedenslicht-Marathon?</h2></div>
+      <div class="section-head"><span class="section-number">06 / KONTAKT</span><h2>Fragen zum Friedenslicht-Marathon?</h2></div>
       <div class="contact-card"><h3>Naturfreunde Ried im Traunkreis</h3><p><strong>Organisation:</strong><br>Alexandra Stinglmair · <a href="tel:+436644383125">+43 664 4383125</a><br>Manfred Dietachmair · <a href="tel:+4369910992735">+43 699 10992735</a></p><p>Offizieller Vereinskontakt für allgemeine Rückfragen:</p><p><a href="mailto:ried-traunkreis@naturfreunde.at">ried-traunkreis@naturfreunde.at</a></p><a class="button" href="https://ried-traunkreis.naturfreunde.at/ueber-uns/kontakt/" target="_blank" rel="noreferrer">Zur offiziellen Kontaktseite ↗</a></div>
     </div></section>
   </main>
