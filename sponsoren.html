@@ -15,7 +15,7 @@
     header { border-bottom:1px solid var(--line); background:white; }
     nav { width:min(calc(100% - 2rem),var(--max)); min-height:72px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
     .brand { display:flex; align-items:center; gap:.7rem; text-decoration:none; font-weight:900; text-transform:uppercase; }
-    .flame { width:24px; height:34px; border-radius:70% 45% 60% 45%; background:var(--gold); box-shadow:inset -8px -9px 0 var(--orange); transform:rotate(8deg); }
+    .brand-logo { width:40px; height:44px; object-fit:contain; }
     .back { min-height:44px; display:inline-flex; align-items:center; font-weight:800; text-underline-offset:.25em; }
     .hero { color:white; background:linear-gradient(110deg,#27345f,#101326 75%); }
     .hero-inner, main { width:min(calc(100% - 2rem),var(--max)); margin:auto; }
@@ -38,7 +38,7 @@
   </style>
 </head>
 <body>
-  <header><nav><a class="brand" href="index.html"><span class="flame" aria-hidden="true"></span><span>Friedenslicht-Marathon</span></a><a class="back" href="index.html">← Zur Startseite</a></nav></header>
+  <header><nav><a class="brand" href="index.html"><img class="brand-logo" src="assets/runner-icon.png" alt=""><span>Friedenslicht-Marathon</span></a><a class="back" href="index.html">← Zur Startseite</a></nav></header>
   <section class="hero"><div class="hero-inner"><p class="eyebrow">20 Jahre · 2006–2026</p><h1>Sponsoren & Partner</h1><p class="intro">Danke an alle Unternehmen, Organisationen und Menschen, die den Friedenslicht-Marathon und die Hilfe für Licht ins Dunkel möglich machen.</p></div></section>
   <main><div class="grid" id="sponsor-grid" aria-live="polite"><p class="empty">Die freigegebenen Sponsoren werden hier ergänzt.</p></div><p class="thanks">Sie möchten den Friedenslicht-Marathon unterstützen? Schreiben Sie an <a href="mailto:ried-traunkreis@naturfreunde.at">ried-traunkreis@naturfreunde.at</a>.</p></main>
   <footer>Friedenslicht-Marathon Ried im Traunkreis · Für Licht ins Dunkel</footer>

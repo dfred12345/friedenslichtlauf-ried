@@ -33,7 +33,7 @@
     .site-header { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); }
     .nav { width: min(calc(100% - 2rem), var(--max)); min-height: 72px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
     .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; font-weight: 900; letter-spacing: .02em; text-transform: uppercase; }
-    .flame { width: 24px; height: 34px; flex: none; border-radius: 70% 45% 60% 45%; background: var(--gold); box-shadow: inset -8px -9px 0 var(--orange); transform: rotate(8deg); }
+    .brand-logo { width: 40px; height: 44px; flex: none; object-fit: contain; }
     .nav-links { display: flex; align-items: center; gap: 1.2rem; }
     .nav-links a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; font-size: .9rem; font-weight: 800; }
     .nav-links a:hover { color: var(--orange); }
@@ -158,7 +158,7 @@
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <header class="site-header">
     <nav class="nav" aria-label="Hauptnavigation">
-      <a class="brand" href="#top" aria-label="Friedenslicht-Marathon Startseite"><span class="flame" aria-hidden="true"></span><span>Friedenslicht-Marathon</span></a>
+      <a class="brand" href="#top" aria-label="Friedenslicht-Marathon Startseite"><img class="brand-logo" src="assets/runner-icon.png" alt=""><span>Friedenslicht-Marathon</span></a>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
       <div class="nav-links" id="nav-links">
         <a href="#mitmachen">Mitmachen</a><a href="#ablauf">Ablauf</a><a href="#strecken">Strecken</a><a href="#anmeldung">Anmeldung</a><a href="sponsoren.html">Sponsoren</a><a href="#fragen">Fragen</a><a href="#kontakt">Kontakt</a>
