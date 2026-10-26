@@ -97,6 +97,9 @@
     .purpose-copy { font-size: 1.08rem; }
     .purpose-copy p:first-child { margin-top: 0; }
     .hero-purpose { max-width: 760px; margin: 0; padding: 0 1rem; font-size: clamp(1.15rem, 2.5vw, 1.6rem); }
+    .community-photo { width: min(calc(100% - 2rem), var(--max)); margin: 0 auto clamp(4.5rem, 9vw, 8rem); }
+    .community-photo img { display: block; width: 100%; height: auto; border-radius: 1rem; box-shadow: 0 18px 50px rgba(13,25,50,.16); }
+    .community-photo figcaption { margin-top: .75rem; color: var(--muted); font-size: .92rem; }
     .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; }
     .pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
     .pillar { padding: clamp(1.25rem, 3vw, 2rem); background: white; border-top: 5px solid var(--orange); }
@@ -159,7 +162,7 @@
     @media (max-width: 520px) {
       .brand span:last-child { max-width: 190px; line-height: 1.05; }
       h1 { font-size: clamp(3.1rem, 17vw, 5.2rem); }
-      .hero-poster { min-height: 310px; object-fit: cover; object-position: center top; }
+      .hero-poster { min-height: 0; object-fit: contain; }
       .event-card { padding-inline: 1rem; }
       .timeline-row { grid-template-columns: 92px 1fr; gap: 1rem; }
       .route { grid-template-columns: 1fr; }
@@ -183,7 +186,7 @@
     <section class="hero" id="top">
       <div class="hero-inner">
         <h1 class="sr-only">20 Jahre Friedenslicht-Marathon Ried im Traunkreis</h1>
-        <img class="hero-poster" src="assets/flm-hero.webp" alt="Friedenslicht-Marathon: stilisierter Läufer mit Fackel vor dem Foto eines Friedenslicht-Laufs">
+        <img class="hero-poster" src="assets/flm-hauptfoto.webp" width="1568" height="882" alt="Teilnehmende des Friedenslicht-Marathons mit Fackeln vor einer Kirche" decoding="async" fetchpriority="high">
         <p class="anniversary">20 Jahre Friedenslichtlauf in Ried · 2006–2026</p>
         <p class="hero-purpose"><strong>Laufen und spenden. Gemeinsam für Menschen in Not.</strong><br>Für Familien, die Unterstützung brauchen. Für Menschen, die es schwer im Leben haben. Für LICHT INS DUNKEL.</p>
         <aside class="event-card" aria-label="Veranstaltungsdaten">
@@ -208,6 +211,11 @@
       <aside class="help-note" id="hilfe" aria-labelledby="hilfe-title"><p class="eyebrow">Unterstützung in unserer Region</p><h3 id="hilfe-title">Du brauchst Hilfe – oder kennst jemanden?</h3><p>Auch Familien und berechtigte Personen aus unserer Region können bei LICHT INS DUNKEL um Unterstützung ansuchen. Ein Antrag auf Soforthilfe muss geprüft und bestätigt werden, zum Beispiel durch das Gemeindeamt, die Bezirkshauptmannschaft oder eine Sozialberatungsstelle. LICHT INS DUNKEL entscheidet anschließend über die Unterstützung; es gibt keinen Rechtsanspruch.<a href="#quelle-1" aria-label="Quelle 1">[1]</a></p><p><a class="button" href="https://lichtinsdunkel.org/ich-brauche-hilfe/hilfe-fuer-familien-und-einzelpersonen/" target="_blank" rel="noreferrer">Soforthilfe: Voraussetzungen & Antrag ↗</a></p><p>Gemeinnützige Vereine und Organisationen können außerdem Förderung für geeignete inklusive Projekte beantragen, die Menschen mit Behinderungen und/oder armutsgefährdeten Kindern zugutekommen.<a href="#quelle-2" aria-label="Quelle 2">[2]</a> <a href="https://lichtinsdunkel.org/ich-brauche-hilfe/unterstuetzung-fuer-vereine-und-organisationen/" target="_blank" rel="noreferrer">Zur Projektförderung ↗</a></p><p><strong>Bitte schütze persönliche Daten:</strong> Keine medizinischen Unterlagen oder Angaben zur finanziellen Notlage über das Lauf-Anmeldeformular übermitteln. Nutze dafür die offiziellen Antragswege. Fragen zur Soforthilfe: <a href="mailto:office@lichtinsdunkel.org">office@lichtinsdunkel.org</a>.</p></aside>
       <div class="sources" aria-label="Quellen"><p><strong>Offizielle Informationen von LICHT INS DUNKEL:</strong></p><ol><li id="quelle-1"><a href="https://lichtinsdunkel.org/ich-brauche-hilfe/hilfe-fuer-familien-und-einzelpersonen/">Hilfe für Familien und Einzelpersonen</a></li><li id="quelle-2"><a href="https://lichtinsdunkel.org/ich-brauche-hilfe/unterstuetzung-fuer-vereine-und-organisationen/">Unterstützung für Vereine und Organisationen</a></li></ol></div>
     </section>
+
+    <figure class="community-photo">
+      <img src="assets/flm-gemeinschaft.webp" width="1568" height="882" alt="Teilnehmende des Friedenslicht-Marathons mit brennenden Fackeln beim gemeinsamen Abschluss" loading="lazy" decoding="async">
+      <figcaption>Gemeinsam Licht bringen: Der Friedenslicht-Marathon lebt von allen, die mitlaufen, mithelfen und gemeinsam ein Zeichen setzen.</figcaption>
+    </figure>
 
     <section class="section" id="mitmachen">
       <div class="section-head"><span class="section-number">01 / MITMACHEN</span><h2>Eine Idee. Fünf Wege, dabei zu sein.</h2></div>
