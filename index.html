@@ -112,9 +112,9 @@
     .route h3 { margin: 0; font-family: var(--display); font-size: 1.8rem; text-transform: uppercase; }
     .route p { margin: .25rem 0 0; color: var(--muted); }
     .route a { font-weight: 900; text-underline-offset: .25em; }
-    .route--featured { grid-template-columns: 1fr auto; }
-    .route-embed { grid-column: 1 / -1; width: 100%; min-width: 0; overflow: hidden; border-radius: 1rem; background: white; }
-    .route-embed iframe { display: block; max-width: 100%; }
+    .route-options { margin: .75rem 0 0; padding: 0; list-style: none; color: var(--muted); }
+    .route-options li + li { margin-top: .65rem; }
+    .route-options strong { color: var(--navy); }
 
     .signup { background: white; }
     .form-frame { width: 70%; min-height: 1750px; margin-left: 30%; border: 1px solid var(--line); background: white; }
@@ -242,17 +242,26 @@
     <section class="routes" id="strecken"><div class="section">
       <div class="section-head"><span class="section-number">03 / STRECKEN</span><h2>Finde deinen Weg zum Licht.</h2></div>
       <div class="route-list">
-        <article class="route route--featured">
-          <div><h3>Laufstrecke</h3><p>Vorläufig ca. 11,2 Kilometer · Streckenlink aus 2025</p></div>
-          <a href="https://www.tourenportal.at/de/tour/jogging/flm-laufstrecke-kremsmuenster-ried-trkr/330030761/" target="_blank" rel="noreferrer">Route öffnen ↗</a>
-          <div class="route-embed" aria-label="Karte der 11,2 Kilometer langen Laufstrecke">
-            <script src="https://www.tourenportal.at/de/embed/330030761/js?mw=false"></script>
-            <noscript><p>Die interaktive Streckenkarte benötigt JavaScript. <a href="https://www.tourenportal.at/de/tour/jogging/flm-laufstrecke-kremsmuenster-ried-trkr/330030761/" target="_blank" rel="noreferrer">Laufstrecke auf tourenportal.at öffnen ↗</a></p></noscript>
+        <article class="route">
+          <div>
+            <h3>Laufstrecken</h3>
+            <ul class="route-options">
+              <li><strong>Ca. 11,2 km:</strong> Gesamte Laufstrecke von Kremsmünster nach Ried im Traunkreis.</li>
+              <li><strong>6 km:</strong> Einstieg bei der Weigersdorfer Kirche um 16:30 Uhr.</li>
+              <li><strong>Ca. 1 km:</strong> Kinderlauf ab der Siedlung beim Fellinger Kreuz, Start ca. 17:10 Uhr.</li>
+            </ul>
           </div>
+          <a href="https://www.tourenportal.at/de/tour/jogging/flm-laufstrecke-kremsmuenster-ried-trkr/330030761/#caml=a14,2bxcjj,7y0zbe,0,0&amp;dm=1" target="_blank" rel="noreferrer">Laufstrecke öffnen ↗</a>
         </article>
-        <article class="route"><div><h3>Walkingstrecke</h3><p>Vorläufig ca. 8,2 Kilometer · Streckenlink aus 2025</p></div><a href="https://www.tourenportal.at/s/IeFvmp" target="_blank" rel="noreferrer">Route öffnen ↗</a></article>
-        <article class="route"><div><h3>6-km-Laufstrecke</h3><p>Einstieg bei der Weigersdorfer Kirche um 16:30 Uhr · selbstständige Anreise</p></div><a href="#ablauf">Zum Ablauf</a></article>
-        <article class="route"><div><h3>Kinderlauf · ca. 1 km</h3><p>Start ca. 17:10 Uhr in der Siedlung beim Fellinger Kreuz</p></div><a href="#ablauf">Zum Ablauf</a></article>
+        <article class="route">
+          <div>
+            <h3>Walkingstrecke</h3>
+            <ul class="route-options">
+              <li><strong>Ca. 8,2 km:</strong> Walkingstrecke von Kremsmünster nach Ried im Traunkreis.</li>
+            </ul>
+          </div>
+          <a href="https://www.tourenportal.at/de/tour/jogging/flm-walkingstrecke-kremsmuenster-ried-trkr/330034791/#caml=a14,2bydmo,7y0yvg,0,0&amp;dm=1" target="_blank" rel="noreferrer">Walkingstrecke öffnen ↗</a>
+        </article>
       </div>
     </div></section>
 
