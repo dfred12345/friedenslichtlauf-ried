@@ -112,6 +112,9 @@
     .route h3 { margin: 0; font-family: var(--display); font-size: 1.8rem; text-transform: uppercase; }
     .route p { margin: .25rem 0 0; color: var(--muted); }
     .route a { font-weight: 900; text-underline-offset: .25em; }
+    .route--featured { grid-template-columns: 1fr auto; }
+    .route-embed { grid-column: 1 / -1; width: 100%; min-width: 0; overflow: hidden; border-radius: 1rem; background: white; }
+    .route-embed iframe { display: block; max-width: 100%; }
 
     .signup { background: white; }
     .form-frame { width: 70%; min-height: 1750px; margin-left: 30%; border: 1px solid var(--line); background: white; }
@@ -235,7 +238,14 @@
     <section class="routes" id="strecken"><div class="section">
       <div class="section-head"><span class="section-number">03 / STRECKEN</span><h2>Finde deinen Weg zum Licht.</h2></div>
       <div class="route-list">
-        <article class="route"><div><h3>Laufstrecke</h3><p>Vorläufig ca. 11,2 Kilometer · Streckenlink aus 2025</p></div><a href="https://www.tourenportal.at/s/IeFsqp" target="_blank" rel="noreferrer">Route öffnen ↗</a></article>
+        <article class="route route--featured">
+          <div><h3>Laufstrecke</h3><p>Vorläufig ca. 11,2 Kilometer · Streckenlink aus 2025</p></div>
+          <a href="https://www.tourenportal.at/de/tour/jogging/flm-laufstrecke-kremsmuenster-ried-trkr/330030761/" target="_blank" rel="noreferrer">Route öffnen ↗</a>
+          <div class="route-embed" aria-label="Karte der 11,2 Kilometer langen Laufstrecke">
+            <script src="https://www.tourenportal.at/de/embed/330030761/js?mw=false"></script>
+            <noscript><p>Die interaktive Streckenkarte benötigt JavaScript. <a href="https://www.tourenportal.at/de/tour/jogging/flm-laufstrecke-kremsmuenster-ried-trkr/330030761/" target="_blank" rel="noreferrer">Laufstrecke auf tourenportal.at öffnen ↗</a></p></noscript>
+          </div>
+        </article>
         <article class="route"><div><h3>Walkingstrecke</h3><p>Vorläufig ca. 8,2 Kilometer · Streckenlink aus 2025</p></div><a href="https://www.tourenportal.at/s/IeFvmp" target="_blank" rel="noreferrer">Route öffnen ↗</a></article>
         <article class="route"><div><h3>Kürzer einsteigen</h3><p>Geplanter Zustieg bei der Weigersdorfer Kirche gegen 16:30 Uhr · selbstständige Anreise</p></div><a href="#fragen">Hinweis lesen</a></article>
       </div>
