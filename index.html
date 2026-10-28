@@ -35,6 +35,9 @@
     .nav { width: min(calc(100% - 2rem), var(--max)); min-height: 72px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
     .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; font-weight: 900; letter-spacing: .02em; text-transform: uppercase; }
     .brand-logo { width: 40px; height: 44px; flex: none; object-fit: contain; }
+    .organizer-logos { display: flex; align-items: center; gap: .8rem; margin-left: auto; }
+    .organizer-logo { display: block; width: auto; max-width: 132px; height: 38px; object-fit: contain; }
+    .organizer-logo--municipality { max-width: 94px; }
     .nav-links { display: flex; align-items: center; gap: 1.2rem; }
     .nav-links a { min-height: 44px; display: inline-flex; align-items: center; text-decoration: none; font-size: .9rem; font-weight: 800; }
     .nav-links a:hover { color: var(--orange); }
@@ -109,7 +112,7 @@
     .pillar h3 { margin-top: 0; font-size: 1.6rem; }
     .help-note { margin-top: 2rem; padding: 1.5rem; border: 1px solid var(--line); }
     .sources { font-size: .9rem; overflow-wrap: anywhere; }
-    @media (max-width: 1100px) and (min-width: 821px) { .nav { flex-wrap: wrap; padding-block: .7rem; } .nav-links { flex-wrap: wrap; gap: .8rem; } .ways { grid-template-columns: repeat(2, minmax(0, 1fr)); } .way, .way:nth-last-child(-n+2) { grid-column: span 1; } }
+    @media (max-width: 1100px) and (min-width: 821px) { .nav { flex-wrap: wrap; padding-block: .7rem; } .nav-links { width: 100%; justify-content: center; flex-wrap: wrap; gap: .8rem; } .ways { grid-template-columns: repeat(2, minmax(0, 1fr)); } .way, .way:nth-last-child(-n+2) { grid-column: span 1; } }
     @media (max-width: 820px) { .pillars { grid-template-columns: 1fr; } }
 
     .routes { background: #e8e9ee; }
@@ -148,6 +151,11 @@
     .footer-meta p { margin: .25rem 0; }
 
     @media (max-width: 820px) {
+      .nav { gap: .65rem; }
+      .brand span { display: none; }
+      .organizer-logos { gap: .5rem; }
+      .organizer-logo { max-width: 98px; height: 30px; }
+      .organizer-logo--municipality { max-width: 70px; }
       .menu-button { display: inline-block; }
       .nav-links { position: absolute; inset: 72px 0 auto; display: none; padding: 1rem; flex-direction: column; align-items: stretch; background: white; border-bottom: 1px solid var(--line); }
       .nav-links.open { display: flex; }
@@ -162,7 +170,8 @@
       .footer-meta { text-align: left; }
     }
     @media (max-width: 520px) {
-      .brand span:last-child { max-width: 190px; line-height: 1.05; }
+      .organizer-logo { max-width: 86px; height: 27px; }
+      .organizer-logo--municipality { max-width: 62px; }
       h1 { font-size: clamp(3.1rem, 17vw, 5.2rem); }
       .hero-poster { min-height: 0; object-fit: contain; }
       .event-card { padding-inline: 1rem; }
@@ -177,6 +186,10 @@
   <header class="site-header">
     <nav class="nav" aria-label="Hauptnavigation">
       <a class="brand" href="#top" aria-label="Friedenslicht-Marathon Startseite"><img class="brand-logo" src="assets/runner-icon.png" alt=""><span>Friedenslicht-Marathon</span></a>
+      <div class="organizer-logos" aria-label="Veranstalter">
+        <img class="organizer-logo" src="assets/naturfreunde-ried.webp" alt="Naturfreunde Ried im Traunkreis">
+        <img class="organizer-logo organizer-logo--municipality" src="assets/gemeinde-ried-im-traunkreis.webp" alt="Gemeinde Ried im Traunkreis">
+      </div>
       <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menü</button>
       <div class="nav-links" id="nav-links">
         <a href="#warum">Warum & Spenden</a><a href="#mitmachen">Mitmachen</a><a href="#ablauf">Ablauf</a><a href="#anmeldung">Anmeldung</a><a href="#hilfe">Hilfe finden</a><a href="sponsoren.html">Sponsoren</a><a href="#kontakt">Kontakt</a>
