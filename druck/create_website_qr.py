@@ -85,7 +85,23 @@ svg = f'''<?xml version="1.0" encoding="UTF-8"?>
 svg_path = OUT / "qr-code-friedenslicht-run-mit-logo.svg"
 svg_path.write_text(svg, encoding="utf-8")
 
+# Black print variant; the orange Friedenslicht mark remains unchanged.
+black_image = image.copy()
+pixels = black_image.load()
+assert pixels is not None
+for y in range(black_image.height):
+    for x in range(black_image.width):
+        if pixels[x, y] == (16, 38, 79):
+            pixels[x, y] = (0, 0, 0)
+black_png_path = OUT / "qr-code-friedenslicht-run-schwarz-mit-logo.png"
+black_image.save(black_png_path, "PNG", dpi=(600, 600), optimize=True)
+
+black_svg_path = OUT / "qr-code-friedenslicht-run-schwarz-mit-logo.svg"
+black_svg_path.write_text(svg.replace("#10264f", "#000000"), encoding="utf-8")
+
 print(f"URL={URL}")
 print(f"matrix={modules}x{modules}, png={size}x{size}px")
 print(png_path)
 print(svg_path)
+print(black_png_path)
+print(black_svg_path)
