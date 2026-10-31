@@ -1,0 +1,67 @@
+name: Submit updated pages to IndexNow
+
+"on":
+  push:
+    branches: [main]
+    paths:
+      - "**.html"
+      - "sitemap.xml"
+      - "robots.txt"
+      - "llms.txt"
+      - "assets/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wait for the published verification key
+        shell: bash
+        run: |
+          key="777548d28f62ae79298bddb75e6b442e"
+          for attempt in {1..18}; do
+            if [[ "$(curl -fsS "https://friedenslicht.run/${key}.txt")" == "$key" ]]; then
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "IndexNow verification key is not published yet" >&2
+          exit 1
+
+      - name: Build IndexNow payload from sitemap
+        shell: python
+        run: |
+          import json
+          import xml.etree.ElementTree as ET
+
+          key = "777548d28f62ae79298bddb75e6b442e"
+          namespace = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+          root = ET.parse("sitemap.xml").getroot()
+          urls = [node.text for node in root.findall("s:url/s:loc", namespace) if node.text]
+          payload = {
+              "host": "friedenslicht.run",
+              "key": key,
+              "keyLocation": f"https://friedenslicht.run/{key}.txt",
+              "urlList": urls,
+          }
+          with open("indexnow.json", "w", encoding="utf-8") as handle:
+              json.dump(payload, handle, ensure_ascii=False)
+
+      - name: Notify IndexNow
+        shell: bash
+        run: |
+          status="$(curl -sS -o response.txt -w '%{http_code}' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            --data-binary @indexnow.json \
+            https://api.indexnow.org/indexnow)"
+          cat response.txt
+          if [[ "$status" != "200" && "$status" != "202" ]]; then
+            echo "IndexNow returned HTTP $status" >&2
+            exit 1
+          fi
+          echo "IndexNow accepted the sitemap URLs with HTTP $status"
