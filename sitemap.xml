@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://friedenslicht.run/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <image:image>
+      <image:loc>https://friedenslicht.run/assets/flm-hauptfoto.webp</image:loc>
+      <image:title>Friedenslicht-Marathon Ried im Traunkreis</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://friedenslicht.run/assets/flm-gemeinschaft.webp</image:loc>
+      <image:title>Gemeinsamer Abschluss beim Friedenslicht-Marathon</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://friedenslicht.run/sponsoren.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+  <url>
+    <loc>https://friedenslicht.run/impressum.html</loc>
+    <lastmod>2026-10-31</lastmod>
+  </url>
+</urlset>
